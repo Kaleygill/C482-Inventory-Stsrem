@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="409.0" prefWidth="277.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPartInHouseController">
+   <children>
+      <AnchorPane prefHeight="508.0" prefWidth="491.0">
+         <children>
+            <VBox layoutX="160.0" layoutY="144.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="addPartIDInTxt" promptText="Part ID">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="addPartNameInTxt" promptText="Part Name">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="addPartInvInTxt" promptText="Part Stock">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="addPartPriceInTxt" promptText="Part Price">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="addPartMaxInTxt" promptText="Max Inventory">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="addPartMachineInTxt" promptText="Machine ID">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <RadioButton fx:id="addPartInBtn" layoutX="140.0" layoutY="75.0" mnemonicParsing="false" onAction="#onActionInHouse" selected="true" text="In-House">
+               <toggleGroup>
+                  <ToggleGroup fx:id="addPartTG" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="addPartOutBtn" layoutX="258.0" layoutY="75.0" mnemonicParsing="false" onAction="#onActionOutsourced" text="Oursourced" toggleGroup="$addPartTG" />
+            <Button layoutX="279.0" layoutY="358.0" mnemonicParsing="false" onAction="#onActionInAddPartSave" text="Save" />
+            <Button layoutX="340.0" layoutY="358.0" mnemonicParsing="false" onAction="#onActionInAddPartCancel" text="Cancel" />
+            <TextField fx:id="addPartMinInTxt" layoutX="316.0" layoutY="288.0" prefWidth="100.0" promptText="Min Inventory" />
+            <Label layoutX="279.0" layoutY="292.0" text="Min" />
+            <VBox layoutX="56.0" layoutY="144.0" prefHeight="200.0" prefWidth="92.0">
+               <children>
+                  <Label text="ID">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Name">
+                     <VBox.margin>
+                        <Insets top="19.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Inv">
+                     <VBox.margin>
+                        <Insets top="17.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Price/Cost">
+                     <VBox.margin>
+                        <Insets top="19.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Max">
+                     <VBox.margin>
+                        <Insets top="19.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="AddPartLbl" prefHeight="17.0" prefWidth="89.0" text="Machine ID">
+                     <VBox.margin>
+                        <Insets top="16.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <Label layoutX="42.0" layoutY="74.0" text="Add Part">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
